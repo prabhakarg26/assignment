@@ -1,5 +1,10 @@
 ---
-- name: Transfer and execute a Python script
+# ==============================================================================
+# Playbook: EC2 Disk Usage
+# Purpose: Executes a python script for extracting disk usage information from every EC2 instance from all AWS accounts
+# ==============================================================================
+
+- name: Execute a Python script for extracting disk usage
   hosts: all
   become: false  # Set to true if the script needs root/sudo privileges
 
