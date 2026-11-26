@@ -1,3 +1,3 @@
 Assignment Solution
 
-![Project Screenshot](images/ArchitectureDiagram.jpg)
+![Project Screenshot](ArchitectureDiagram.jpg)
