@@ -9,7 +9,7 @@
   become: false  # Set to true if the script needs root/sudo privileges
 
   tasks:
-    - name: Run local Python script on remote hosts
+    - name: Run local Python script
       ansible.builtin.script: /home/ansible/playbooks/ec2-disk-usage.py
       args:
         executable: python3
