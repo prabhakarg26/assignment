@@ -1,0 +1,20 @@
+---
+# ==============================================================================
+# Playbook: EC2 Disk Usage Dashboard
+# Purpose: Uses the output csv file from the Playbook1 and creates EC2-Disk-Usage Dashboard in PNG format
+# ==============================================================================
+
+- name: Execute a Python script for creating disk usage dashboard
+  hosts: all
+  become: false  # Set to true if the script needs root/sudo privileges
+
+  tasks:
+    - name: Run local Python script
+      ansible.builtin.script: /home/ansible/playbooks/create-disk-usage-dashboard.py
+      args:
+        executable: python3
+      register: script_result
+
+    - name: Display script output
+      ansible.builtin.debug:
+        var: script_result.stdout_lines
