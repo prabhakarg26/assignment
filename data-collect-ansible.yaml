@@ -10,7 +10,7 @@
 
   tasks:
     - name: Run local Python script on remote hosts
-      ansible.builtin.script: /home/ansible/playbooks/ec2-disk-usuage.py
+      ansible.builtin.script: /home/ansible/playbooks/ec2-disk-usage.py
       args:
         executable: python3
       register: script_result
